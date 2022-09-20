@@ -17,13 +17,40 @@ def func(a, b):
     :param b: description
     """
     result = 0
-    n = randomrandint(10, 751)
+    n = random.randint(10, 751)
     for i in range(n):
         result += (i ** 2)
     return 'output of func'
 
 Output: 	 
-func call 1 executed in 0.001 sec
+funk call 1 executed in 0.0005 sec
+Name: 	 funk
+Type: 	 <class 'function'>
+Sign: 	 (n=2, m=5)
+Arg: 	 positional (2, 4)
+Arg: 	 kwarg {}
+Doc: 	 
+    This function does something useful
+    :param n: description
+    :param m: description
+    
+Source: 	 @decorator_4
+def funk(n=2, m=5):
+    """
+    This function does something useful
+    :param n: description
+    :param m: description
+    """
+    max_val = float('-inf')
+    n = random.randint(10, 751)
+    res = [pow(i, 2) for i in range(n)]
+    for i in res:
+        if i > max_val:
+            max_val = i
+    return 'output of funk'
+
+Output: 	 
+func call 2 executed in 0.0 sec
 Name: 	 func
 Type: 	 <class 'function'>
 Sign: 	 (a, b)
@@ -42,13 +69,40 @@ def func(a, b):
     :param b: description
     """
     result = 0
-    n = randomrandint(10, 751)
+    n = random.randint(10, 751)
     for i in range(n):
         result += (i ** 2)
     return 'output of func'
 
 Output: 	 
-func call 1 executed in 0.0 sec
+funk call 2 executed in 0.0003 sec
+Name: 	 funk
+Type: 	 <class 'function'>
+Sign: 	 (n=2, m=5)
+Arg: 	 positional (10, 30)
+Arg: 	 kwarg {}
+Doc: 	 
+    This function does something useful
+    :param n: description
+    :param m: description
+    
+Source: 	 @decorator_4
+def funk(n=2, m=5):
+    """
+    This function does something useful
+    :param n: description
+    :param m: description
+    """
+    max_val = float('-inf')
+    n = random.randint(10, 751)
+    res = [pow(i, 2) for i in range(n)]
+    for i in res:
+        if i > max_val:
+            max_val = i
+    return 'output of funk'
+
+Output: 	 
+func call 3 executed in 0.0 sec
 Name: 	 func
 Type: 	 <class 'function'>
 Sign: 	 (a, b)
@@ -67,107 +121,7 @@ def func(a, b):
     :param b: description
     """
     result = 0
-    n = randomrandint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
-
-Output: 	 
-func call 1 executed in 0.0 sec
-Name: 	 func
-Type: 	 <class 'function'>
-Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
-Doc: 	 
-    This function does something useful
-    :param a: description
-    :param b: description
-    
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = randomrandint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
-
-Output: 	 
-func call 1 executed in 0.0 sec
-Name: 	 func
-Type: 	 <class 'function'>
-Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
-Doc: 	 
-    This function does something useful
-    :param a: description
-    :param b: description
-    
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = randomrandint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
-
-Output: 	 
-func call 1 executed in 0.0 sec
-Name: 	 func
-Type: 	 <class 'function'>
-Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
-Doc: 	 
-    This function does something useful
-    :param a: description
-    :param b: description
-    
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = randomrandint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
-
-Output: 	 
-func call 1 executed in 0.0 sec
-Name: 	 func
-Type: 	 <class 'function'>
-Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
-Doc: 	 
-    This function does something useful
-    :param a: description
-    :param b: description
-    
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = randomrandint(10, 751)
+    n = random.randint(10, 751)
     for i in range(n):
         result += (i ** 2)
     return 'output of func'

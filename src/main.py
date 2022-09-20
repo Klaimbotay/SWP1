@@ -4,6 +4,8 @@ from task2 import decorator_2
 from task3 import decorator_3
 from task4 import decorator_4
 import task3
+import task4
+
 
 @decorator_4
 def func(a, b):
@@ -13,10 +15,11 @@ def func(a, b):
     :param b: description
     """
     result = 0
-    n = randomrandint(10, 751)
+    n = random.randint(10, 751)
     for i in range(n):
         result += (i ** 2)
     return 'output of func'
+
 
 @decorator_4
 def funk(n=2, m=5):
@@ -33,6 +36,7 @@ def funk(n=2, m=5):
             max_val = i
     return 'output of funk'
 
+
 if __name__ == "__main__":
     func()
     funk(2, 4)
@@ -40,6 +44,6 @@ if __name__ == "__main__":
     funk(10, 30)
     func()
     print('PROGRAM | RANK | TIME ELAPSED')
-    dict(sorted(task3.rank.items(), key=lambda item: item[1]))
-    for i, (k, v) in enumerate(task3.rank.items()):
-        print(f'{k}\t\t{i+1} \t\t{round(v, 6)}')
+    dict(sorted(task4.rank.items(), key=lambda item: item[1]))
+    for i, (k, v) in enumerate(task4.rank.items()):
+        print(f'{k}\t\t{i + 1} \t\t{round(v, 6)}')
