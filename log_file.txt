@@ -1,0 +1,2 @@
+func() missing 1 required positional argument: 'b'func() missing 2 required positional arguments: 'a' and 'b'name 'randomrandint' is not definedname 'randomrandint' is not definedname 'randomrandint' is not definedname 'randomrandint' is not definedname 'randomrandint' is not defined
+name 'randomrandint' is not defined
