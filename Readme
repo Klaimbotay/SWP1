@@ -1,2 +1,4 @@
 Program prints information about functions using decorators
-To use decorators change their numbers in main.py
+To use different decorators change their numbers in main.py 
+lines look like '@decorator_<number>'
+Also for decorator_3 and 4 there are parts of code in main.py which should be commented/uncommented according to the chosen decorator.
