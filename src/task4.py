@@ -17,6 +17,7 @@ class decorator_4:
             self.func(args, kwargs)
         except Exception as Argument:
             with open('log_file.txt', 'a') as out:
+                out.write(f'Error with function {self.func.__name__}')
                 out.write(str(Argument) + '\n')
 
         end = time.time() - start

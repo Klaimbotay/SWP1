@@ -98,3 +98,78 @@ def func(a, b):
     return 'output of func'
 
 Output: 	 
+func call 1 executed in 0.0 sec
+Name: 	 func
+Type: 	 <class 'function'>
+Sign: 	 (a, b)
+Arg: 	 positional ()
+Arg: 	 kwarg {}
+Doc: 	 
+    This function does something useful
+    :param a: description
+    :param b: description
+    
+Source: 	 @decorator_4
+def func(a, b):
+    """
+    This function does something useful
+    :param a: description
+    :param b: description
+    """
+    result = 0
+    n = randomrandint(10, 751)
+    for i in range(n):
+        result += (i ** 2)
+    return 'output of func'
+
+Output: 	 
+func call 1 executed in 0.0 sec
+Name: 	 func
+Type: 	 <class 'function'>
+Sign: 	 (a, b)
+Arg: 	 positional ()
+Arg: 	 kwarg {}
+Doc: 	 
+    This function does something useful
+    :param a: description
+    :param b: description
+    
+Source: 	 @decorator_4
+def func(a, b):
+    """
+    This function does something useful
+    :param a: description
+    :param b: description
+    """
+    result = 0
+    n = randomrandint(10, 751)
+    for i in range(n):
+        result += (i ** 2)
+    return 'output of func'
+
+Output: 	 
+func call 1 executed in 0.0 sec
+Name: 	 func
+Type: 	 <class 'function'>
+Sign: 	 (a, b)
+Arg: 	 positional ()
+Arg: 	 kwarg {}
+Doc: 	 
+    This function does something useful
+    :param a: description
+    :param b: description
+    
+Source: 	 @decorator_4
+def func(a, b):
+    """
+    This function does something useful
+    :param a: description
+    :param b: description
+    """
+    result = 0
+    n = randomrandint(10, 751)
+    for i in range(n):
+        result += (i ** 2)
+    return 'output of func'
+
+Output: 	 
