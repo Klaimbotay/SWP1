@@ -1,0 +1,1 @@
+Error with function funk'>' not supported between instances of 'int' and 'str'

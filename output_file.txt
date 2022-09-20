@@ -1,129 +1,199 @@
-func call 1 executed in 0.0 sec
+func call 1 executed in 0.3125 sec
 Name: 	 func
 Type: 	 <class 'function'>
 Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
+Args: 	 positional (4, 5)
+      	 kwarg {}
+
 Doc: 	 
     This function does something useful
     :param a: description
     :param b: description
     
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = random.randint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
+Source: 		@decorator_4
+	def func(a, b):
+	    """
+	    This function does something useful
+	    :param a: description
+	    :param b: description
+	    """
+	    result = 0
+	    for i in range(1000000):
+	        result += (i ** 2)
+	    return result
 
-Output: 	 
-funk call 1 executed in 0.0005 sec
+Output: 	 333332833333500000
+
+
+funk call 1 executed in 0.4219 sec
 Name: 	 funk
 Type: 	 <class 'function'>
 Sign: 	 (n=2, m=5)
-Arg: 	 positional (2, 4)
-Arg: 	 kwarg {}
+Args: 	 positional (3, 1)
+      	 kwarg {}
+
 Doc: 	 
     This function does something useful
     :param n: description
     :param m: description
     
-Source: 	 @decorator_4
-def funk(n=2, m=5):
-    """
-    This function does something useful
-    :param n: description
-    :param m: description
-    """
-    max_val = float('-inf')
-    n = random.randint(10, 751)
-    res = [pow(i, 2) for i in range(n)]
-    for i in res:
-        if i > max_val:
-            max_val = i
-    return 'output of funk'
+Source: 		@decorator_4
+	def funk(n=2, m=5):
+	    """
+	    This function does something useful
+	    :param n: description
+	    :param m: description
+	    """
+	    max_val = float('-inf')
+	    res = [pow(i, 2) for i in range(1000000)]
+	    for i in res:
+	        if i > max_val:
+	            max_val = i
+	    return max_val
 
-Output: 	 
-func call 2 executed in 0.0 sec
-Name: 	 func
-Type: 	 <class 'function'>
-Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
-Doc: 	 
-    This function does something useful
-    :param a: description
-    :param b: description
-    
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = random.randint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
+Output: 	 999998000001
 
-Output: 	 
-funk call 2 executed in 0.0003 sec
-Name: 	 funk
+
+funh call 1 executed in 0.0312 sec
+Name: 	 funh
 Type: 	 <class 'function'>
 Sign: 	 (n=2, m=5)
-Arg: 	 positional (10, 30)
-Arg: 	 kwarg {}
+Args: 	 positional (8,)
+      	 kwarg {'m': 6}
+
 Doc: 	 
     This function does something useful
     :param n: description
     :param m: description
     
-Source: 	 @decorator_4
-def funk(n=2, m=5):
-    """
+Source: 		@decorator_4
+	def funh(n=2, m=5):
+	    """
+	    This function does something useful
+	    :param n: description
+	    :param m: description
+	    """
+	    max_val = float('-inf')
+	    res = [pow(i, 2) for i in range(100000)]
+	    for i in res:
+	        if i > max_val:
+	            max_val = i
+	    return max_val
+
+Output: 	 9999800001
+
+
+fund call 1 executed in 0.3906 sec
+Name: 	 fund
+Type: 	 <class 'function'>
+Sign: 	 (n=2, m=5)
+Args: 	 positional ()
+      	 kwarg {'n': 1, 'm': 8}
+
+Doc: 	 
     This function does something useful
     :param n: description
     :param m: description
-    """
-    max_val = float('-inf')
-    n = random.randint(10, 751)
-    res = [pow(i, 2) for i in range(n)]
-    for i in res:
-        if i > max_val:
-            max_val = i
-    return 'output of funk'
+    
+Source: 		@decorator_4
+	def fund(n=2, m=5):
+	    """
+	    This function does something useful
+	    :param n: description
+	    :param m: description
+	    """
+	    max_val = float('-inf')
+	    res = [pow(i, 2) for i in range(1000000)]
+	    for i in res:
+	        if i > max_val:
+	            max_val = i
+	    return max_val
 
-Output: 	 
-func call 3 executed in 0.0 sec
+Output: 	 999998000001
+
+
+func call 1 executed in 0.3281 sec
 Name: 	 func
 Type: 	 <class 'function'>
 Sign: 	 (a, b)
-Arg: 	 positional ()
-Arg: 	 kwarg {}
+Args: 	 positional (4, 5)
+      	 kwarg {}
+
 Doc: 	 
     This function does something useful
     :param a: description
     :param b: description
     
-Source: 	 @decorator_4
-def func(a, b):
-    """
-    This function does something useful
-    :param a: description
-    :param b: description
-    """
-    result = 0
-    n = random.randint(10, 751)
-    for i in range(n):
-        result += (i ** 2)
-    return 'output of func'
+Source: 		@decorator_4
+	def func(a, b):
+	    """
+	    This function does something useful
+	    :param a: description
+	    :param b: description
+	    """
+	    result = 0
+	    for i in range(1000000):
+	        result += (i ** 2)
+	    return result
 
-Output: 	 
+Output: 	 333332833333500000
+
+
+funh call 1 executed in 0.0308 sec
+Name: 	 funh
+Type: 	 <class 'function'>
+Sign: 	 (n=2, m=5)
+Args: 	 positional (8,)
+      	 kwarg {'m': 6}
+
+Doc: 	 
+    This function does something useful
+    :param n: description
+    :param m: description
+    
+Source: 		@decorator_4
+	def funh(n=2, m=5):
+	    """
+	    This function does something useful
+	    :param n: description
+	    :param m: description
+	    """
+	    max_val = float('-inf')
+	    res = [pow(i, 2) for i in range(100000)]
+	    for i in res:
+	        if i > max_val:
+	            max_val = i
+	    return max_val
+
+Output: 	 9999800001
+
+
+fund call 1 executed in 0.375 sec
+Name: 	 fund
+Type: 	 <class 'function'>
+Sign: 	 (n=2, m=5)
+Args: 	 positional ()
+      	 kwarg {'n': 1, 'm': 8}
+
+Doc: 	 
+    This function does something useful
+    :param n: description
+    :param m: description
+    
+Source: 		@decorator_4
+	def fund(n=2, m=5):
+	    """
+	    This function does something useful
+	    :param n: description
+	    :param m: description
+	    """
+	    max_val = float('-inf')
+	    res = [pow(i, 2) for i in range(1000000)]
+	    for i in res:
+	        if i > max_val:
+	            max_val = i
+	    return max_val
+
+Output: 	 999998000001
+
+

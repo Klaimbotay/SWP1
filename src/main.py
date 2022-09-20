@@ -1,4 +1,5 @@
 import random
+import time
 from task1 import decorator_1
 from task2 import decorator_2
 from task3 import decorator_3
@@ -15,10 +16,9 @@ def func(a, b):
     :param b: description
     """
     result = 0
-    n = random.randint(10, 751)
-    for i in range(n):
+    for i in range(1000000):
         result += (i ** 2)
-    return 'output of func'
+    return result
 
 
 @decorator_4
@@ -29,21 +29,53 @@ def funk(n=2, m=5):
     :param m: description
     """
     max_val = float('-inf')
-    n = random.randint(10, 751)
-    res = [pow(i, 2) for i in range(n)]
+    res = [pow(i, 2) for i in range(1000000)]
     for i in res:
         if i > max_val:
             max_val = i
-    return 'output of funk'
+    return max_val
+
+@decorator_4
+def funh(n=2, m=5):
+    """
+    This function does something useful
+    :param n: description
+    :param m: description
+    """
+    max_val = float('-inf')
+    res = [pow(i, 2) for i in range(100000)]
+    for i in res:
+        if i > max_val:
+            max_val = i
+    return max_val
+
+@decorator_4
+def fund(n=2, m=5):
+    """
+    This function does something useful
+    :param n: description
+    :param m: description
+    """
+    max_val = float('-inf')
+    res = [pow(i, 2) for i in range(1000000)]
+    for i in res:
+        if i > max_val:
+            max_val = i
+    return max_val
 
 
 if __name__ == "__main__":
-    func()
-    funk(2, 4)
-    func()
-    funk(10, 30)
-    func()
+    func(4, 5)
+    funk(3, 1)
+    funh(8, m=6)
+    fund(n=1, m=8)
+    # # decorator_3
+    # print('PROGRAM | RANK | TIME ELAPSED')
+    # rank_table = dict(sorted(task3.rank.items(), key=lambda item: item[1]))
+    # for i, (k, v) in enumerate(rank_table.items()):
+    #     print(f'{k}\t\t{i + 1} \t\t{v}')
+    #decorator_4
     print('PROGRAM | RANK | TIME ELAPSED')
-    dict(sorted(task4.rank.items(), key=lambda item: item[1]))
-    for i, (k, v) in enumerate(task4.rank.items()):
-        print(f'{k}\t\t{i + 1} \t\t{round(v, 6)}')
+    rank_table = dict(sorted(task4.rank.items(), key=lambda item: item[1]))
+    for i, (k, v) in enumerate(rank_table.items()):
+        print(f'{k}\t\t{i + 1} \t\t{v}')
