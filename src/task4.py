@@ -1,5 +1,8 @@
 import time
-from inspect import *
+from inspect import *  # try to avoid this
+
+#RV imports
+from task3 import print_ranks
 
 rank = {}
 
@@ -38,13 +41,19 @@ class decorator_4:
         rank[self.func.__name__] = round(end, 5)
         return
 
+    # display via class function
+    @staticmethod
+    def print_ranks():
+        global rank
+        print_ranks(rank)
+
 
 def decorator_5(fun):
     def wrapper(*args, **kwargs):
         wrapper.calls += 1
         try:
             start = time.time()
-            fun(args, kwargs)
+            fun(*args, **kwargs)  # use * and **
             end = time.time() - start
             print(f'{fun.__name__} call {wrapper.calls} executed in {round(end, 4)} sec\n')
             print('Name: ', '\t', fun.__name__)
@@ -57,7 +66,7 @@ def decorator_5(fun):
             print('Source: \t', end='')
             for l in lines[0]:
                 print('\t' + str(l), end='')
-            print(f'\nOutput: \t {str(fun(args, kwargs))}\n\n')
+            print(f'\nOutput: \t {str(fun(*args, **kwargs))}\n\n')
             print('\n')
 
         except Exception as Argument:

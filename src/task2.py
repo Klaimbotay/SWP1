@@ -1,4 +1,4 @@
-from inspect import *
+from inspect import *  # try to avoid this
 import time
 
 
@@ -19,7 +19,7 @@ def decorator_2(fun):
         print('Source: \t', end='')
         for l in lines[0]:
             print('\t' + str(l), end='')
-        print(f'\nOutput: \t {str(fun(args, kwargs))}\n\n\n')
+        print(f'\nOutput: \t {str(fun(args, kwargs))}\n\n\n')  # second func call!
         return
 
     wrapper.calls = 0
