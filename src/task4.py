@@ -1,5 +1,6 @@
 import time
 from inspect import *
+import contextlib, io
 
 rank = {}
 
@@ -14,7 +15,8 @@ class decorator_4:
         self.count += 1
         start = time.time()
         try:
-            self.func(args, kwargs)
+            with contextlib.redirect_stdout(io.StringIO()) as f:
+                output = self.func(args, kwargs)
             with open('output_file.txt', 'a') as out:
                 out.write(f'{self.func.__name__} call {self.count} executed in {round(time.time() - start, 4)} sec\n')
                 out.write(f'Name: \t {self.func.__name__}\n')
@@ -27,7 +29,7 @@ class decorator_4:
                 out.write('Source: \t')
                 for l in lines[0]:
                     out.write('\t' + str(l))
-                out.write(f'\nOutput: \t {str(self.func(args, kwargs))}\n\n\n')
+                out.write(f'\nOutput: \t {str(output)}\n\n\n')
 
         except Exception as Argument:
             with open('log_file.txt', 'a') as out:
@@ -36,7 +38,7 @@ class decorator_4:
 
         end = time.time() - start
         rank[self.func.__name__] = round(end, 5)
-        return
+        return output
 
 
 def decorator_5(fun):
@@ -44,7 +46,8 @@ def decorator_5(fun):
         wrapper.calls += 1
         try:
             start = time.time()
-            fun(args, kwargs)
+            with contextlib.redirect_stdout(io.StringIO()) as f:
+                output = fun(args, kwargs)
             end = time.time() - start
             print(f'{fun.__name__} call {wrapper.calls} executed in {round(end, 4)} sec\n')
             print('Name: ', '\t', fun.__name__)
@@ -64,7 +67,7 @@ def decorator_5(fun):
             with open('log_file.txt', 'a') as out:
                 out.write(f'Error with function {fun.__name__}')
                 out.write(str(Argument) + '\n')
-        return
+        return output
 
     wrapper.calls = 0
     return wrapper
