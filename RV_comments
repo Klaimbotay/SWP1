@@ -1,0 +1,26 @@
+Review comments of Roman Vetrin
+
+============ TASKS COMMENTS ====================
+This comment section covers observation on completeness of tasks completed.
+    1. According to general description of the assignment, "The main.py file contains at least 2 functions containing lambda expressions within... ". However, I did not noticed any of such functions in the main.py.
+    2. All decorators pass variables to the functions incorrectly. As a results, functions receive not variables but a turple and a dict thus unable to properly use them. While examining the code I found that none of the functions actually uses any of the parameters given in main. I tried to use parameters in funh() but received an error (see the commented line with print). You should use (*args, **kargs) notation to actually pass the parameters. Please, see revised RV_funch() and RV_decorator_1 for example of correct parameters pass.
+    3. All wrappers and __call__ functions in decorators returns None and thus any output of passed functions will be unusable. You should return value which would have been returned by a function. Please, see revised RV_decorator for example of correct wrapper / __call__ return.
+    4. According to Task 3 description, all program output should be recorded to the file. On the lab it was stated that this includes the functions console output. Redirection of func output can be done with String IO and sys libraries. See the corrected task 3 for example.
+    5. As stated in Task 4 description - 'pipe the error stream into a log file together with a timestamp.'. However, currently no timestamp provided in the error log file
+
+============ SIGNIFICANT DESIGN COMMENTS ====================
+This comment section covers noticeable observation on code structure, code maintainability, etc.
+    1. main.py is organized in such a way that in order to explore capabilities of each decorator, it is required to change the code. Although it is explained in README file on how to change the decorators, it is very inconvenient to work with such code. To avoid this, you can use different functions or use func = decorator(func) notation (see, the example in main.py).
+    2. decorator_3 and decorator_4 cannot display their ranks on their own. Thus, if decorators are imported separately, user would have to rank them manually as it's done in main.py. It is highly recommended to create separate methods in tasks files or in decorators themselves. Please, see examples in the modified decorators.
+    3. decorators 2-4 executes a functions 2 times which is highly inefficient. You can save result of a function into a variable and then use it if necessary.
+
+============ INSIGNIFICANT TASKS COMMENTS ====================
+This comment section covers insignificant observation on completeness of tasks completed.
+    1. Currently decorator_3 and decorator_4 are updating rank dictionary on every function call. Thus, only last function calls are valid for ranking. It is better to clearly define, which function call will really go to ranking or rank every call. For example, in my solution, I ranked only the fastest function calls.
+    2. Although it is not directly stated in tasks description, the example for Task 2 hints that Output section should display whatever function prints into the console. However, currently only function return is printed.
+
+============ INSIGNIFICANT DESIGN COMMENTS ====================
+This comment section covers insignificant observation on code structure, code maintainability, etc.
+    1. main.py does not allow to fully demonstrate @decorator_1 in terms of different counts for different functions.
+    2. It is better to extract all print functions from task 2-4 into separate function and use it in each task
+    3. It is preferred to not import all functions from a library ('from lib import *' is a bad notation)
